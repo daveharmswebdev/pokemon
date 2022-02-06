@@ -15,7 +15,11 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .authorizeRequests().anyRequest().permitAll()
-                .and().formLogin().and().httpBasic();
+                .authorizeRequests()
+                    .antMatchers("/api/v1/pokemon").authenticated()
+                    .antMatchers("/api/v1/trainer").authenticated()
+                    .antMatchers("/api/v1/notices").permitAll()
+                .and()
+                    .formLogin().and().httpBasic();
     }
 }
