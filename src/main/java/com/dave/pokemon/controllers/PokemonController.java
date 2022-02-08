@@ -25,6 +25,7 @@ public class PokemonController {
 
     @GetMapping
     public List<Pokemon> getPokemon() {
-        return pokemonService.getAllPokemon();
+        List<Pokemon> pokemons = pokemonService.getAllPokemon();
+        return pokemons;
     }
 }
