@@ -1,5 +1,7 @@
 package com.dave.pokemon.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,6 +19,7 @@ public class Trainer {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String email;
+    @JsonIgnore
     private String password;
     private String role;
 
