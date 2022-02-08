@@ -4,15 +4,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.JdbcUserDetailsManager;
+import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.sql.DataSource;
 import java.util.Collections;
 
 
@@ -39,10 +37,14 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
                         return config;
                     }
                 }).and()
+                .csrf()
+//                .disable()
+                .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()).and()
                 .authorizeRequests()
                     .antMatchers("/api/v1/pokemon").authenticated()
                     .antMatchers("/api/v1/trainer").authenticated()
                     .antMatchers("/api/v1/notices").permitAll()
+                    .antMatchers("/api/v1/login").permitAll()
                 .and()
                     .formLogin().and().httpBasic();
     }
