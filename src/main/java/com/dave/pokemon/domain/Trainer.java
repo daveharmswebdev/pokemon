@@ -1,4 +1,4 @@
-package com.dave.pokemon.models;
+package com.dave.pokemon.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

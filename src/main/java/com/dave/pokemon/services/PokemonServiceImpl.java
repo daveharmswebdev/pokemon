@@ -1,6 +1,6 @@
 package com.dave.pokemon.services;
 
-import com.dave.pokemon.models.Pokemon;
+import com.dave.pokemon.domain.Pokemon;
 import com.dave.pokemon.repository.PokemonRepository;
 import org.springframework.stereotype.Service;
 

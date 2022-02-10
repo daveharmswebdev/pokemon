@@ -1,6 +1,6 @@
 package com.dave.pokemon.controllers;
 
-import com.dave.pokemon.models.Pokemon;
+import com.dave.pokemon.domain.Pokemon;
 import com.dave.pokemon.services.PokemonService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,6 +1,6 @@
 package com.dave.pokemon.services;
 
-import com.dave.pokemon.models.Pokemon;
+import com.dave.pokemon.domain.Pokemon;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.dave.pokemon.models;
+package com.dave.pokemon.domain;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

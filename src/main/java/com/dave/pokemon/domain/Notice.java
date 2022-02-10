@@ -1,24 +1,22 @@
-package com.dave.pokemon.models;
+package com.dave.pokemon.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * User: Dave Harms
- * Date: 2/8/22
- * Time: 3:15 PM
+ * Date: 2/9/22
+ * Time: 6:04 PM
  */
 @Entity
-public class Pokemon {
+@Table(name = "notices")
+public class Notice {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String name;
-    private int hitPoints;
+    private String notice;
 
     public Long getId() {
         return id;
@@ -36,11 +34,11 @@ public class Pokemon {
         this.name = name;
     }
 
-    public int getHitPoints() {
-        return hitPoints;
+    public String getNotice() {
+        return notice;
     }
 
-    public void setHitPoints(int hitPoints) {
-        this.hitPoints = hitPoints;
+    public void setNotice(String notice) {
+        this.notice = notice;
     }
 }

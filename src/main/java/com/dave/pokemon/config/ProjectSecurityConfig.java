@@ -51,6 +51,7 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                     .antMatchers("/api/v1/pokemon").authenticated()
                     .antMatchers("/api/v1/trainer").authenticated()
+                    .antMatchers("/api/v1/battle").hasRole("ROOT")
                     .antMatchers("/api/v1/notices").permitAll()
                     .antMatchers("/api/v1/login").permitAll()
                 .and()
