@@ -14,8 +14,8 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
 
 
 /**
@@ -39,7 +39,7 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
                         config.setAllowedMethods(Collections.singletonList("*"));
                         config.setAllowCredentials(true);
                         config.setAllowedHeaders(Collections.singletonList("*"));
-                        config.setExposedHeaders(List.of("Authorization"));
+                        config.setExposedHeaders(Arrays.asList("Authorization"));
                         config.setMaxAge(3600L);
                         return config;
                     }
@@ -51,6 +51,7 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                     .antMatchers("/api/v1/pokemon").authenticated()
                     .antMatchers("/api/v1/trainer").authenticated()
+                    .antMatchers("/api/v1/battle").hasRole("ROOT")
                     .antMatchers("/api/v1/notices").permitAll()
                     .antMatchers("/api/v1/login").permitAll()
                 .and()

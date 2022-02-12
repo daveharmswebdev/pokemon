@@ -1,6 +1,6 @@
 package com.dave.pokemon.config;
 
-import com.dave.pokemon.models.Trainer;
+import com.dave.pokemon.domain.Trainer;
 import com.dave.pokemon.repository.TrainerRepository;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;

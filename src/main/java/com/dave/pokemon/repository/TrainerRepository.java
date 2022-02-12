@@ -1,6 +1,6 @@
 package com.dave.pokemon.repository;
 
-import com.dave.pokemon.models.Trainer;
+import com.dave.pokemon.domain.Trainer;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

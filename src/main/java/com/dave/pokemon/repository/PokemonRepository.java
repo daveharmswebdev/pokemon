@@ -1,6 +1,6 @@
 package com.dave.pokemon.repository;
 
-import com.dave.pokemon.models.Pokemon;
+import com.dave.pokemon.domain.Pokemon;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

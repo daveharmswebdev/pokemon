@@ -1,6 +1,6 @@
 package com.dave.pokemon.controllers;
 
-import com.dave.pokemon.models.Trainer;
+import com.dave.pokemon.domain.Trainer;
 import com.dave.pokemon.repository.TrainerRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

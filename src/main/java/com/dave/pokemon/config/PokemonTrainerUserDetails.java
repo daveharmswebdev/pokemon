@@ -1,7 +1,7 @@
 package com.dave.pokemon.config;
 
-import com.dave.pokemon.models.SecurityTrainer;
-import com.dave.pokemon.models.Trainer;
+import com.dave.pokemon.domain.SecurityTrainer;
+import com.dave.pokemon.domain.Trainer;
 import com.dave.pokemon.repository.TrainerRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
