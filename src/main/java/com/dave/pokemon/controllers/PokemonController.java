@@ -1,6 +1,6 @@
 package com.dave.pokemon.controllers;
 
-import com.dave.pokemon.domain.Pokemon;
+import com.dave.pokemon.api.v1.model.PokemonDto;
 import com.dave.pokemon.services.PokemonService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,8 +24,8 @@ public class PokemonController {
     }
 
     @GetMapping
-    public List<Pokemon> getPokemon() {
-        List<Pokemon> pokemons = pokemonService.getAllPokemon();
+    public List<PokemonDto> getPokemon() {
+        List<PokemonDto> pokemons = pokemonService.getAllPokemon();
         return pokemons;
     }
 }

@@ -1,6 +1,6 @@
 package com.dave.pokemon.services;
 
-import com.dave.pokemon.domain.Pokemon;
+import com.dave.pokemon.api.v1.model.PokemonDto;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import java.util.List;
  */
 public interface PokemonService {
 
-    List<Pokemon> getAllPokemon();
+    List<PokemonDto> getAllPokemon();
 
-    Pokemon getPokemon(Long id);
+    PokemonDto getPokemon(Long id);
 }
